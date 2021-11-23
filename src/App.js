@@ -6,8 +6,8 @@ const cardImages = [
     {"src": "/img/two.jpg"},
     {"src": "/img/three.jpg"},
     {"src": "/img/four.jpg"},
-    {"src": "/img/five.jpg"}
-    // {"src": "/img/one.jpg"},
+    {"src": "/img/five.jpg"},
+    {"src": "/img/six.jpg"}
     // {"src": "/img/one.jpg"},
     // {"src": "/img/one.jpg"}
 ]
