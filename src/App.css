@@ -19,14 +19,12 @@ button:hover {
   color: #fff;
 }
 img {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
 }
-.card-grid {
+.card-flex {
   text-align: center;
   margin-top: 40px;
   display: flex;
-  /* grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 20px; */
-  
+  flex-wrap: wrap;
 }
