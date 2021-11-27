@@ -35,6 +35,7 @@ function App() {
     const handleChoice  = (card) => {
         choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
     }
+    
     // compare two selcted cards
     useEffect(() => {
         if (choiceOne && choiceTwo) {
