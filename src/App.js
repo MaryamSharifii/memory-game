@@ -4,14 +4,14 @@ import SingleCard from './components/SingleCard'
 
 const cardImages = [
     
-    {"src": "/img/one.jpg"},
-    {"src": "/img/two.jpg"},
-    {"src": "/img/three.jpg"},
-    {"src": "/img/four.jpg"},
-    {"src": "/img/five.jpg"},
-    {"src": "/img/six.jpg"},
-    {"src": "/img/seven.jpg"},
-    {"src": "/img/eight.jpg"}
+    {"src": "/img/one.jpg", matched: false },
+    {"src": "/img/two.jpg", matched: false},
+    {"src": "/img/three.jpg", matched: false},
+    {"src": "/img/four.jpg", matched: false},
+    {"src": "/img/five.jpg", matched: false},
+    {"src": "/img/six.jpg", matched: false},
+    {"src": "/img/seven.jpg", matched: false},
+    {"src": "/img/eight.jpg", matched: false}
 ]
 
 function App() {
@@ -41,10 +41,17 @@ function App() {
         if (choiceOne && choiceTwo) {
 
             if (choiceOne.src === choiceTwo.src) {
-                console.log("Those cards match")
+                setCards(prevCards => {
+                    return prevCards.map(card => {
+                        if(card.src === choiceOne.src) {
+                            return {...card, matched: true}
+                        } else {
+                            return card
+                        }
+                    })
+                })
                 resetTurn()
             }else {
-                console.log("Those cards do not match")
                 resetTurn()
             }
         }
